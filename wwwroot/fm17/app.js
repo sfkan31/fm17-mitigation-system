@@ -84,7 +84,7 @@ function renderActions(mitigation) {
     return '-';
   }
 
-  return `<div class="row-actions">${actionButtons.join('')}</div>`;
+  return `<div class="row-actions ui-control">${actionButtons.join('')}</div>`;
 }
 
 function renderMitigations(mitigations) {
@@ -102,12 +102,15 @@ function renderMitigations(mitigations) {
       return `
         <tr class="${overdueClass}">
           <td>${escapeHtml(mitigation.riskSourceId)}</td>
-          <td>${escapeHtml(mitigation.title)}</td>
+          <td>-</td>
           <td>${escapeHtml(mitigation.severityLevel)}</td>
+          <td>${escapeHtml(mitigation.title)}</td>
           <td>${escapeHtml(mitigation.mitigationOwner)}</td>
           <td>${formatDate(mitigation.dueDate)}</td>
-          <td><span class="status-pill ${statusClass}">${escapeHtml(status)}</span></td>
-          <td>${renderActions(mitigation)}</td>
+          <td>
+            <span class="status-pill ${statusClass}">${escapeHtml(status)}</span>
+            ${renderActions(mitigation)}
+          </td>
         </tr>
       `;
     })
