@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "9CTSMYVRONrNcdqLMBzJvKoH/jnOKtr/QUs/eAyUFto=",
+  "Source": "FM17",
+  "BasePath": "_content/FM17",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FM17\\wwwroot",
+      "Source": "FM17",
+      "ContentRoot": "C:\\Dev\\FM17\\wwwroot\\",
+      "BasePath": "_content/FM17",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Dev\\FM17\\wwwroot\\fm17\\index.html",
+      "SourceId": "FM17",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\FM17\\wwwroot\\",
+      "BasePath": "_content/FM17",
+      "RelativePath": "fm17/index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fm17\\index.html"
+    }
+  ]
+}
