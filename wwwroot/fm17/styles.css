@@ -25,15 +25,20 @@ h2 {
 }
 
 .header-block {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   gap: 1rem;
-  align-items: flex-start;
   background: #fff;
   border: 1px solid #d8deea;
   border-radius: 10px;
   padding: 1.2rem 1.3rem;
   margin-bottom: 1rem;
+}
+
+.header-title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
 }
 
 .eyebrow {
@@ -63,6 +68,37 @@ h2 {
   border-radius: 999px;
   padding: 0.2rem 0.6rem;
   font-size: 0.82rem;
+}
+
+.header-table-wrap {
+  overflow-x: auto;
+}
+
+.header-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.header-table th,
+.header-table td {
+  border: 1px solid #d9e1ef;
+  padding: 0.52rem 0.6rem;
+  font-size: 0.88rem;
+  vertical-align: middle;
+}
+
+.header-table th {
+  width: 18%;
+  background: #eef2f9;
+  color: #334155;
+  font-weight: 600;
+}
+
+.header-table td {
+  width: 32%;
+  background: #fff;
+  color: #1f2937;
 }
 
 .panel {
@@ -136,6 +172,32 @@ textarea {
 
 .muted-fields {
   opacity: 0.95;
+}
+
+.placeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.placeholder-cell {
+  border: 1px solid #d9e1ef;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 0.65rem 0.75rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.placeholder-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.placeholder-value {
+  font-size: 0.92rem;
+  color: #0f172a;
 }
 
 .actions {
@@ -235,11 +297,15 @@ tr.overdue td {
 }
 
 @media (max-width: 900px) {
-  .header-block {
+  .header-title-row {
     flex-direction: column;
   }
 
   .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .placeholder-grid {
     grid-template-columns: 1fr;
   }
 }
