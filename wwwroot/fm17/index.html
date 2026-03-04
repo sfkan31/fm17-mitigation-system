@@ -9,46 +9,53 @@
 <body>
   <main class="container">
     <header class="header-block">
-      <div>
-        <p class="eyebrow">Operational Risk Register</p>
-        <h1>FM.17 Post-PO Mitigation &amp; Execution</h1>
-        <p class="subtext">Converted from FM.13 risks after PO receipt</p>
+      <div class="header-title-row">
+        <div>
+          <p class="eyebrow">Operational Risk Register</p>
+          <h1>FM.17 Post-PO Mitigation &amp; Execution</h1>
+          <p class="subtext">Converted from FM.13 risks after PO receipt</p>
+        </div>
+        <div class="badge-row" aria-label="System status">
+          <span class="status-badge">Host: <strong>Running</strong></span>
+          <span class="status-badge">Data: <strong>In-Memory</strong></span>
+        </div>
       </div>
-      <div class="badge-row" aria-label="System status">
-        <span class="status-badge">Host: <strong>Running</strong></span>
-        <span class="status-badge">Data: <strong>In-Memory</strong></span>
+
+      <div class="header-table-wrap" role="region" aria-label="FM.17 Work Order Header">
+        <table class="header-table">
+          <tbody>
+            <tr>
+              <th scope="row">Customer Name</th>
+              <td>TBD</td>
+              <th scope="row">Part Number / Assembly</th>
+              <td>TBD</td>
+            </tr>
+            <tr>
+              <th scope="row">Work Order Number</th>
+              <td>TBD</td>
+              <th scope="row">PO Number</th>
+              <td>TBD</td>
+            </tr>
+            <tr>
+              <th scope="row">Build Quantity</th>
+              <td>TBD</td>
+              <th scope="row">Need Date</th>
+              <td>TBD</td>
+            </tr>
+            <tr>
+              <th scope="row">TBD</th>
+              <td>&nbsp;</td>
+              <th scope="row">TBD</th>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </header>
 
-    <section class="panel">
-      <h2>Section 1: Job / PO Context</h2>
-      <div class="form-grid muted-fields">
-        <div class="form-row">
-          <label for="poNumber">PO Number</label>
-          <input id="poNumber" name="poNumber" type="text" />
-        </div>
-        <div class="form-row">
-          <label for="customer">Customer</label>
-          <input id="customer" name="customer" type="text" />
-        </div>
-        <div class="form-row">
-          <label for="partNumber">Part Number / Assembly</label>
-          <input id="partNumber" name="partNumber" type="text" />
-        </div>
-        <div class="form-row">
-          <label for="buildQty">Build Qty</label>
-          <input id="buildQty" name="buildQty" type="number" min="0" />
-        </div>
-        <div class="form-row">
-          <label for="needDate">Need Date</label>
-          <input id="needDate" name="needDate" type="date" />
-        </div>
-      </div>
-    </section>
-
     <form id="mitigation-form" class="stacked-form" novalidate>
       <section class="panel">
-        <h2>Section 2: Risk Linkage (FM.13 Carryover)</h2>
+        <h2>Schedule &amp; Commitments</h2>
         <div class="form-grid">
           <div class="form-row">
             <label for="riskSourceId">RiskSourceId <span class="required">*</span></label>
@@ -77,7 +84,25 @@
       </section>
 
       <section class="panel">
-        <h2>Section 3: Mitigation Plan (Execution)</h2>
+        <h2>Materials</h2>
+        <div class="placeholder-grid" aria-label="Materials header placeholders">
+          <div class="placeholder-cell">
+            <span class="placeholder-label">Material Status</span>
+            <span class="placeholder-value">TBD</span>
+          </div>
+          <div class="placeholder-cell">
+            <span class="placeholder-label">Critical Components</span>
+            <span class="placeholder-value">TBD</span>
+          </div>
+          <div class="placeholder-cell">
+            <span class="placeholder-label">Supplier ETA</span>
+            <span class="placeholder-value">TBD</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Execution Readiness</h2>
         <div class="form-grid">
           <div class="form-row">
             <label for="mitigationOwner">MitigationOwner</label>
@@ -112,7 +137,7 @@
     </form>
 
     <section class="panel">
-      <h2>Section 4: Mitigation Register (List)</h2>
+      <h2>Mitigation Actions Register</h2>
       <div class="table-wrap">
         <table>
           <thead>
