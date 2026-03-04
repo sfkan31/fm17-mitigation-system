@@ -3,66 +3,63 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FM.17 Mitigation Dashboard</title>
+  <title>NPI Work Order Sheet (FM.17)</title>
   <link rel="stylesheet" href="/fm17/styles.css" />
 </head>
 <body>
-  <main class="container">
-    <header class="header-block">
-      <div class="header-title-row">
-        <div>
-          <p class="eyebrow">Operational Risk Register</p>
-          <h1>FM.17 Post-PO Mitigation &amp; Execution</h1>
-          <p class="subtext">Converted from FM.13 risks after PO receipt</p>
-        </div>
-        <div class="badge-row" aria-label="System status">
-          <span class="status-badge">Host: <strong>Running</strong></span>
-          <span class="status-badge">Data: <strong>In-Memory</strong></span>
-        </div>
-      </div>
-
-      <div class="header-table-wrap" role="region" aria-label="FM.17 Work Order Header">
-        <table class="header-table">
-          <tbody>
-            <tr>
-              <th scope="row">Customer Name</th>
-              <td>TBD</td>
-              <th scope="row">Part Number / Assembly</th>
-              <td>TBD</td>
-            </tr>
-            <tr>
-              <th scope="row">Work Order Number</th>
-              <td>TBD</td>
-              <th scope="row">PO Number</th>
-              <td>TBD</td>
-            </tr>
-            <tr>
-              <th scope="row">Build Quantity</th>
-              <td>TBD</td>
-              <th scope="row">Need Date</th>
-              <td>TBD</td>
-            </tr>
-            <tr>
-              <th scope="row">TBD</th>
-              <td>&nbsp;</td>
-              <th scope="row">TBD</th>
-              <td>&nbsp;</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <main class="sheet">
+    <header class="sheet-header" role="banner">
+      <table class="header-table" aria-label="NPI Work Order Header">
+        <tbody>
+          <tr>
+            <td class="title-cell" colspan="6">NPI Work Order Sheet (FM.17)</td>
+          </tr>
+          <tr>
+            <th scope="row">Customer Name</th>
+            <td>TBD</td>
+            <th scope="row">Part Number / Assembly</th>
+            <td>TBD</td>
+            <th scope="row">Program</th>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <th scope="row">Work Order Number</th>
+            <td>TBD</td>
+            <th scope="row">PO Number</th>
+            <td>TBD</td>
+            <th scope="row">Revision</th>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <th scope="row">Build Quantity</th>
+            <td>TBD</td>
+            <th scope="row">Need Date</th>
+            <td>TBD</td>
+            <th scope="row">Planner</th>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <th scope="row">Prepared By</th>
+            <td>&nbsp;</td>
+            <th scope="row">Date Prepared</th>
+            <td>&nbsp;</td>
+            <th scope="row">TBD</th>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
     </header>
 
-    <form id="mitigation-form" class="stacked-form" novalidate>
-      <section class="panel">
-        <h2>Schedule &amp; Commitments</h2>
-        <div class="form-grid">
+    <form id="mitigation-form" novalidate>
+      <section class="form-section" aria-labelledby="work-order-title">
+        <h2 id="work-order-title">Work Order / Schedule</h2>
+        <div class="section-body">
           <div class="form-row">
-            <label for="riskSourceId">RiskSourceId <span class="required">*</span></label>
+            <label for="riskSourceId">Risk Source ID <span class="required">*</span></label>
             <input id="riskSourceId" name="riskSourceId" type="text" required />
           </div>
           <div class="form-row">
-            <label for="severityLevel">SeverityLevel <span class="required">*</span></label>
+            <label for="severityLevel">Severity Level <span class="required">*</span></label>
             <select id="severityLevel" name="severityLevel" required>
               <option value="">Select severity</option>
               <option value="1">1</option>
@@ -73,7 +70,7 @@
             </select>
           </div>
           <div class="form-row full-width">
-            <label for="title">Title <span class="required">*</span></label>
+            <label for="title">Mitigation Title <span class="required">*</span></label>
             <input id="title" name="title" type="text" required />
           </div>
           <div class="form-row full-width">
@@ -83,50 +80,50 @@
         </div>
       </section>
 
-      <section class="panel">
-        <h2>Materials</h2>
-        <div class="placeholder-grid" aria-label="Materials header placeholders">
-          <div class="placeholder-cell">
-            <span class="placeholder-label">Material Status</span>
-            <span class="placeholder-value">TBD</span>
+      <section class="form-section" aria-labelledby="materials-title">
+        <h2 id="materials-title">Materials</h2>
+        <div class="section-body">
+          <div class="form-row">
+            <label for="materialStatus">Material Status</label>
+            <input id="materialStatus" type="text" placeholder="TBD" disabled />
           </div>
-          <div class="placeholder-cell">
-            <span class="placeholder-label">Critical Components</span>
-            <span class="placeholder-value">TBD</span>
+          <div class="form-row">
+            <label for="criticalComponents">Critical Components</label>
+            <input id="criticalComponents" type="text" placeholder="TBD" disabled />
           </div>
-          <div class="placeholder-cell">
-            <span class="placeholder-label">Supplier ETA</span>
-            <span class="placeholder-value">TBD</span>
+          <div class="form-row full-width">
+            <label for="supplierEta">Supplier ETA</label>
+            <input id="supplierEta" type="text" placeholder="TBD" disabled />
           </div>
         </div>
       </section>
 
-      <section class="panel">
-        <h2>Execution Readiness</h2>
-        <div class="form-grid">
+      <section class="form-section" aria-labelledby="execution-title">
+        <h2 id="execution-title">Execution Readiness</h2>
+        <div class="section-body">
           <div class="form-row">
-            <label for="mitigationOwner">MitigationOwner</label>
+            <label for="mitigationOwner">Mitigation Owner</label>
             <input id="mitigationOwner" name="mitigationOwner" type="text" />
           </div>
           <div class="form-row">
-            <label for="dueDate">DueDate</label>
+            <label for="dueDate">Due Date</label>
             <input id="dueDate" name="dueDate" type="date" />
           </div>
-          <div class="form-row">
+          <div class="form-row full-width">
             <label for="status">Status</label>
             <select id="status" name="status">
               <option value="0">Open</option>
-              <option value="1">InProgress</option>
+              <option value="1">In Progress</option>
               <option value="2">Closed</option>
             </select>
           </div>
           <div class="form-row full-width">
-            <label for="mitigationPlan">MitigationPlan</label>
-            <textarea id="mitigationPlan" name="mitigationPlan" rows="3"></textarea>
+            <label for="mitigationPlan">Mitigation Plan</label>
+            <textarea id="mitigationPlan" name="mitigationPlan" rows="3" disabled placeholder="TBD"></textarea>
           </div>
           <div class="form-row full-width">
-            <label for="verificationEvidence">VerificationEvidence</label>
-            <textarea id="verificationEvidence" name="verificationEvidence" rows="3"></textarea>
+            <label for="verificationEvidence">Verification Evidence</label>
+            <textarea id="verificationEvidence" name="verificationEvidence" rows="3" disabled placeholder="TBD"></textarea>
           </div>
         </div>
         <div class="actions">
@@ -136,8 +133,8 @@
       </section>
     </form>
 
-    <section class="panel">
-      <h2>Mitigation Actions Register</h2>
+    <section class="form-section" aria-labelledby="register-title">
+      <h2 id="register-title">Mitigation Actions Register</h2>
       <div class="table-wrap">
         <table>
           <thead>
