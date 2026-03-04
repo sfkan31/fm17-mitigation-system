@@ -1,0 +1,86 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f7f7fb;
+  color: #1d1d1f;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  padding: 0.45rem 0.5rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.actions {
+  margin-top: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.message {
+  min-height: 1.2rem;
+  color: #0b6b23;
+}
+
+.message.error {
+  color: #b00020;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #f0f0f5;
+}
