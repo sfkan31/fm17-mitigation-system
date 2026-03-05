@@ -21,32 +21,38 @@
       </table>
     </section>
 
-    <section class="form-block" aria-label="Header Information">
-      <table class="form-table header-info-table">
+    <section class="print-block" data-block="header-fields">
+      <table>
+        <colgroup>
+          <col style="width:18%" />
+          <col style="width:32%" />
+          <col style="width:18%" />
+          <col style="width:32%" />
+        </colgroup>
         <tbody>
           <tr>
-            <th scope="row">Customer Name</th>
-            <td><input type="text" aria-label="Customer Name" /></td>
-            <th scope="row">Initiated By</th>
-            <td><input type="text" aria-label="Initiated By" /></td>
+            <td class="sectionHdr">Customer Name:</td>
+            <td><input class="lineInput" id="customerName" /></td>
+            <td class="sectionHdr">Initiated By:</td>
+            <td><input class="lineInput" id="initiatedBy" /></td>
           </tr>
           <tr>
-            <th scope="row">Work Order Number</th>
-            <td><input type="text" aria-label="Work Order Number" /></td>
-            <th scope="row">PO Number</th>
-            <td><input type="text" aria-label="PO Number" /></td>
+            <td class="sectionHdr">Work Order Number:</td>
+            <td><input class="lineInput" id="workOrderNumber" /></td>
+            <td class="sectionHdr">PO Number:</td>
+            <td><input class="lineInput" id="poNumber" /></td>
           </tr>
           <tr>
-            <th scope="row">Part Number / Assembly</th>
-            <td><input type="text" aria-label="Part Number or Assembly" /></td>
-            <th scope="row">Build Quantity</th>
-            <td><input type="text" aria-label="Build Quantity" /></td>
+            <td class="sectionHdr">Part Number / Assembly:</td>
+            <td><input class="lineInput" id="partNumber" /></td>
+            <td class="sectionHdr">Build Quantity:</td>
+            <td><input class="lineInput" id="buildQuantity" /></td>
           </tr>
           <tr>
-            <th scope="row">Start Date</th>
-            <td><input type="date" aria-label="Start Date" /></td>
-            <th scope="row">Need Date</th>
-            <td><input type="date" aria-label="Need Date" /></td>
+            <td class="sectionHdr">Start Date:</td>
+            <td><input class="lineInput" id="startDate" type="date" /></td>
+            <td class="sectionHdr">Need Date:</td>
+            <td><input class="lineInput" id="needDate" type="date" /></td>
           </tr>
         </tbody>
       </table>
